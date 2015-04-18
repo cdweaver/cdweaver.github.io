@@ -1,12 +1,13 @@
+var userName;
+var imgURL;
+var userEmail;
+
 
 function dragonViewModel() {
-    this.userName = ko.observable("BOB");
-    this.imgURL = ko.observable("");
-    this.userEmail = ko.observable("");
+    userName = ko.observable("BOB");
+    imgURL = ko.observable("");
+    userEmail = ko.observable("");
 }
-
-// Activates knockout.js
-
 
 
 function onSignIn(googleUser) {
