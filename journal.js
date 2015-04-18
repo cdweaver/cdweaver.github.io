@@ -9,7 +9,7 @@ function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
   var name = (profile.getName());
-  var userImage = ('<img src="' + profile.getImageUrl() + '>');
+  var userImage = ('<img src="' + profile.getImageUrl() + '">');
   var userEmail = ('Email: ' + profile.getEmail());
   ko.applyBindings(new createUserObject(name, userImage, userEmail));
 
