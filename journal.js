@@ -24,6 +24,6 @@ function signOut() {
 					var name = ("");
   					var userImage = ("");
   					var userEmail = ("");
-					ko.applyBindings(new createUserObject(name, userImage, userEmail));
+					createUserObject(name, userImage, userEmail);
 				});
 			}
