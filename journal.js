@@ -1,21 +1,29 @@
-var userName = ko.observable();
-var userImage = ko.observable();
-var userEmail = ko.observable();
-    
+function createUserObject(userName, userImage, userEmail) {
+    this.userName = ko.observable(userName);
+    this.userImage = ko.observable(userImage);
+    this.userEmail = ko.observable(userEmail);
+    console.log(userImage);
+}
+
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
-  this.userName = (profile.getName());
+  var name = (profile.getName());
   var userImage = ('<img src="' + profile.getImageUrl() + '">');
   var userEmail = ('Email: ' + profile.getEmail());
- 
-console.log(userName);
+  ko.applyBindings(new createUserObject(name, userImage, userEmail));
+
+  
+
 }
 
 function signOut() {
 				var auth2 = gapi.auth2.getAuthInstance();
 				auth2.signOut().then(function() {
 					console.log('User signed out.');
+					createUserObject.userName();
+  					userImage = ("");
+  					userEmail = ("");
 
 				});
 			}
