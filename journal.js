@@ -1,7 +1,7 @@
 var dragonViewModel = {
     userName: ko.observable
 };
-var  = ko.observable();
+
 ko.applyBindings(dragonViewModel);
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
