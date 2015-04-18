@@ -1,11 +1,11 @@
-var name = ("");
-var userImage = ("");
-var userEmail = ("");
-
+var userName = ko.observable();
+var userImage = ko.observable();
+var userEmail = ko.observable();
+    
 function createUserObject(userName, userImage, userEmail) {
-    this.userName = ko.observable(userName);
-    this.userImage = ko.observable(userImage);
-    this.userEmail = ko.observable(userEmail);
+    this.userName = userName;
+    this.userImage = userImage;
+    this.userEmail = userEmail;
     console.log(userImage);
 }
 
