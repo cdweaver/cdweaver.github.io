@@ -1,15 +1,17 @@
-var userName = ko.observable();
-var imgURL;
+var userName;
+var userImage;
 var userEmail;
+
 
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
   userName = ('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
-  
+  userImage = ('Image URL: ' + profile.getImageUrl());
+  console.log(userName;)
+  userEmail = ('Email: ' + profile.getEmail());
+  createUserObject(userName, userImage, userEmail);
 }
 
 function signOut() {
