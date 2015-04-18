@@ -12,7 +12,7 @@ function createUserObject(name, img, email) {
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
-  var name = (profile.getName());
+  userName = (profile.getName());
   var userImage = ('<img src="' + profile.getImageUrl() + '">');
   var userEmail = ('Email: ' + profile.getEmail());
   new createUserObject(name, userImage, userEmail);
