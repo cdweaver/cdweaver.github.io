@@ -1,13 +1,18 @@
-var dragonViewModel = {
-    userName: ko.observable('')
-};
 
+function dragonViewModel() {
+    this.userName = ko.observable("");
+    this.imgURL = ko.observable("");
+    this.userEmail = ko.observable("");
+}
+
+// Activates knockout.js
+ko.applyBindings(new dragonViewModel());
 
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
-  this.userName = ('Name: ' + profile.getName());
+  userName = ('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
   
