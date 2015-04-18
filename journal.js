@@ -10,7 +10,10 @@ function onSignIn(googleUser) {
   var name = ('Name: ' + profile.getName());
   var userImage = ('Image URL: ' + profile.getImageUrl());
   var userEmail = ('Email: ' + profile.getEmail());
-  createUserObject(name, userImage, userEmail);
+  ko.applyBindings(new createUserObject(name, userImage, userEmail));
+
+  
+
 }
 
 function signOut() {
