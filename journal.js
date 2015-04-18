@@ -1,17 +1,16 @@
-var userName;
-var userImage;
-var userEmail;
-
-
+function createUserObject(userName, userImage, userEmail) {
+    this.userName = ko.observable(userName);
+    this.userImage = ko.observable("Bertington");
+}
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
-  userName = ('Name: ' + profile.getName());
-  userImage = ('Image URL: ' + profile.getImageUrl());
+  var name = ('Name: ' + profile.getName());
+  var userImage = ('Image URL: ' + profile.getImageUrl());
   console.log(userName);
-  userEmail = ('Email: ' + profile.getEmail());
-  createUserObject(userName, userImage, userEmail);
+  var userEmail = ('Email: ' + profile.getEmail());
+  createUserObject(name, userImage, userEmail);
 }
 
 function signOut() {
