@@ -1,4 +1,4 @@
-var userName = ko.observable("BOB");
+var userName = ko.observable();
 var imgURL;
 var userEmail;
 
