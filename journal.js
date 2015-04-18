@@ -6,7 +6,7 @@ function dragonViewModel() {
 }
 
 // Activates knockout.js
-ko.applyBindings(new dragonViewModel());
+ko.applyBindings(new dragonViewModel);
 
 
 function onSignIn(googleUser) {
