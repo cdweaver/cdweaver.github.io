@@ -1,8 +1,9 @@
 var dragonViewModel = {
-    userName: ""
+    userName: ko.observable('')
 };
 
-ko.applyBindings(dragonViewModel);
+
+
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
