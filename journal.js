@@ -1,13 +1,6 @@
-var userName;
+var userName = ko.observable("BOB");
 var imgURL;
 var userEmail;
-
-
-function dragonViewModel() {
-    userName = ko.observable("BOB");
-    imgURL = ko.observable("");
-    userEmail = ko.observable("");
-}
 
 
 function onSignIn(googleUser) {
