@@ -9,7 +9,7 @@ function onSignIn(googleUser) {
   console.log('ID: ' + profile.getId());
   userName = ('Name: ' + profile.getName());
   userImage = ('Image URL: ' + profile.getImageUrl());
-  console.log(userName;)
+  console.log(userName);
   userEmail = ('Email: ' + profile.getEmail());
   createUserObject(userName, userImage, userEmail);
 }
