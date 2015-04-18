@@ -1,6 +1,6 @@
 function createUserObject(userName, userImage, userEmail) {
     this.userName = ko.observable(userName);
-    this.userImage = ko.observable("Bertington");
+    this.userImage = ko.observable(userImage);
     console.log(userName);
 }
 
