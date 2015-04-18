@@ -1,6 +1,6 @@
 
 function dragonViewModel() {
-    this.userName = ko.observable("");
+    this.userName = ko.observable("BOB");
     this.imgURL = ko.observable("");
     this.userEmail = ko.observable("");
 }
