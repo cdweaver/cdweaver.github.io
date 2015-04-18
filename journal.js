@@ -6,9 +6,8 @@ var dragonViewModel = {
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
-  ko.applyBindings(dragonViewModel)
   console.log('ID: ' + profile.getId());
-  userName = ('Name: ' + profile.getName());
+  this.userName = ('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
   
