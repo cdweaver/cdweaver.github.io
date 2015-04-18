@@ -2,10 +2,10 @@ var userName = ko.observable();
 var userImage = ko.observable();
 var userEmail = ko.observable();
     
-function createUserObject(userName, userImage, userEmail) {
-    this.userName = userName;
-    this.userImage = userImage;
-    this.userEmail = userEmail;
+function createUserObject(name, img, email) {
+    this.userName = name;
+    this.userImage = img;
+    this.userEmail = email;
     console.log(userImage);
 }
 
@@ -15,7 +15,7 @@ function onSignIn(googleUser) {
   var name = (profile.getName());
   var userImage = ('<img src="' + profile.getImageUrl() + '">');
   var userEmail = ('Email: ' + profile.getEmail());
-  ko.applyBindings(new createUserObject(name, userImage, userEmail));
+  new createUserObject(name, userImage, userEmail);
 
   
 
