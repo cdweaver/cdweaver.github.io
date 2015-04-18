@@ -1,5 +1,5 @@
 var dragonViewModel = {
-    userName: ko.observable('')
+    userName: ""
 };
 
 ko.applyBindings(dragonViewModel);
