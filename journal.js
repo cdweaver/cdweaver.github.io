@@ -5,7 +5,7 @@ var userEmail = ko.observable();
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId());
-  userName = (profile.getName());
+  this.userName = (profile.getName());
   var userImage = ('<img src="' + profile.getImageUrl() + '">');
   var userEmail = ('Email: ' + profile.getEmail());
  
