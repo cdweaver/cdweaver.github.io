@@ -1,6 +1,7 @@
 function createUserObject(userName, userImage, userEmail) {
     this.userName = ko.observable(userName);
     this.userImage = ko.observable("Bertington");
+    console.log(userName);
 }
 
 function onSignIn(googleUser) {
@@ -8,7 +9,6 @@ function onSignIn(googleUser) {
   console.log('ID: ' + profile.getId());
   var name = ('Name: ' + profile.getName());
   var userImage = ('Image URL: ' + profile.getImageUrl());
-  console.log(userName);
   var userEmail = ('Email: ' + profile.getEmail());
   createUserObject(name, userImage, userEmail);
 }
