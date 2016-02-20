@@ -18,6 +18,8 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
+		<link rel="stylesheet" href="journal.css">
+
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -25,7 +27,16 @@
 	</head>
 
 	<body>
-		<div class="dj-userInfo">
+		<div class="dj-headerContainer">
+			<div class="dj-headerLeft">
+				<label class="dj-headerSearch">
+				<input class="form-control" type="text">
+				<span class="sr-only">Search</span>
+			</label>
+			</div>
+			<div class="dj-headerRight">
+			
+			<div class="dj-userInfo">
 			<div data-bind="html: userImage"></div>
 			<div data-bind="text: userName"></div>
 			<div data-bind="text: userEmail"></div>
@@ -33,6 +44,14 @@
 		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 
 		<a href="#" onclick="signOut();">Sign out</a>
-
+		</div>
+		</div>
+		
+		<div class="dj-mainWrapper">
+		<div class="dj-menu">
+			<h3>Menu</h3>
+		</div>
+		<div class="dj-content"></div>
+		</div>
 	</body>
 </html>
