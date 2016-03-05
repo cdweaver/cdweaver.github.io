@@ -43,7 +43,7 @@ h3{
 	background-color: transparent;
 }
 .dj-userDropdown-menu{
-	width: 40px;
+	width: 250px;
 	padding: 10px;
 }
 .dj-userImage img{
@@ -51,6 +51,26 @@ h3{
 	height: 50px;
 }
 
+.dj-menuList{
+	list-style: none;
+	padding-left: 0;
+}
+.dj-menuItem{
+	font-size: 20px;
+}
+.dj-menuItem .glyphicon{
+	padding-right: 5px;
+}
+.dj-menuItem, .dj-mainMenuHeader{
+	padding: 10px 15px;
+}
+.dj-mainMenuHeader{
+	border-bottom: 1px solid #eee;
+	font-size: 30px;
+}
+.dj-menuItem:hover{
+	background-color: #eee;
+}
 
 /*SLIDEBAR OVERRIDES*/
 .sb-slidebar{
