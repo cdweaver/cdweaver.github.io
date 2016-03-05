@@ -34,6 +34,11 @@ html, body{
 h3{
 	margin-top: 0;
 }
+.dj-userDropdown{
+	color: #000;
+	border: none;
+	background-color: transparent;
+}
 
 
 /*SLIDEBAR OVERRIDES*/
