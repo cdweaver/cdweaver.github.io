@@ -49,9 +49,9 @@
 			
 			<div class="dj-userDropdown dropdown" data-bind="visible: isSignedIn">
   <button class="dj-userDropdown-button dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <div data-bind="html: userImage"></div>
+    <div class="dj-userImage" data-bind="html: userImage"></div>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  <ul class="dj-userDropdown-menu dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
     <li>
     	<div data-bind="text: userName"></div>
 		<div data-bind="text: userEmail"></div>

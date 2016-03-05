@@ -42,6 +42,14 @@ h3{
 	border: none;
 	background-color: transparent;
 }
+.dj-userDropdown-menu{
+	width: 40px;
+	padding: 10px;
+}
+.dj-userImage{
+	width: 30px;
+	height: 30px;
+}
 
 
 /*SLIDEBAR OVERRIDES*/
