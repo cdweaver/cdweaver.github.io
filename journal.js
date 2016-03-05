@@ -2,7 +2,7 @@ function createUserObject(userName, userImage, userEmail) {
     this.userName = ko.observable(userName);
     this.userImage = ko.observable(userImage);
     this.userEmail = ko.observable(userEmail);
-    console.log(userImage);
+    this.isSignedIn = ko.observable(true);
 }
 
 function onSignIn(googleUser) {
@@ -12,7 +12,7 @@ function onSignIn(googleUser) {
   var userImage = ('<img src="' + profile.getImageUrl() + '">');
   var userEmail = ('Email: ' + profile.getEmail());
   ko.applyBindings(new createUserObject(name, userImage, userEmail));
-
+	
   
 
 }
@@ -20,7 +20,6 @@ function onSignIn(googleUser) {
 function signOut() {
 				var auth2 = gapi.auth2.getAuthInstance();
 				auth2.signOut().then(function() {
-					console.log('User signed out.');
 
 				});
 			}

@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,24 +11,35 @@
 		
 		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+		<script src="slidebars.js"></script>
 		<script src="journal.js"></script>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-
+		<link rel="stylesheet" href="slidebars.min.css">
 		<link rel="stylesheet" href="journal.css">
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		
+		<script>
+  (function($) {
+    $(document).ready(function() {
+      $.slidebars();
+    });
+  }) (jQuery);
+    </script>
 		<meta name="google-signin-client_id" content="891918827588-jd1cggntqu51q6tft3114pv2dt0rkql0.apps.googleusercontent.com">
 	</head>
 
 	<body>
+		<div id="sb-site">
 		<div class="dj-headerContainer">
 			<div class="dj-headerLeft">
+				<button class="dj-menuButton sb-toggle-left"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></button>
 				<label class="dj-headerSearch">
 				<input class="form-control" type="text">
 				<span class="sr-only">Search</span>
@@ -36,6 +47,19 @@
 			</div>
 			<div class="dj-headerRight">
 			
+			<div class="dropdown" data-bind="visible: isSignedIn">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <div data-bind="html: userImage"></div>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li>
+    	<div data-bind="text: userName"></div>
+		<div data-bind="text: userEmail"></div>
+		</li>
+    <li><a href="#" onclick="signOut();">Sign out</a></li>
+    
+  </ul>
+</div>
 			<div class="dj-userInfo">
 			<div data-bind="html: userImage"></div>
 			<div data-bind="text: userName"></div>
@@ -43,15 +67,20 @@
 		</div>
 		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-		<a href="#" onclick="signOut();">Sign out</a>
 		</div>
 		</div>
 		
 		<div class="dj-mainWrapper">
-		<div class="dj-menu">
-			<h3>Menu</h3>
-		</div>
+		
 		<div class="dj-content"></div>
 		</div>
+	</div>
+		<div class="sb-slidebar sb-left sb-width-thin">
+      <!-- Your left Slidebar content. -->
+      <h3>Menu</h3>
+    </div>
+    
+    
+    
 	</body>
 </html>
