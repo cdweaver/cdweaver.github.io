@@ -14,10 +14,11 @@ html, body{
 	height: 80px;
 }
 .dj-headerContainer *{
-	color: #fff;
+	
 }
 .dj-headerLeft{
 	float: left;
+	color: #fff;
 }
 .dj-headerRight{
 	float: right;
@@ -36,6 +37,8 @@ h3{
 }
 .dj-userDropdown{
 	color: #000;
+}
+.dj-userDropdown-button{
 	border: none;
 	background-color: transparent;
 }
