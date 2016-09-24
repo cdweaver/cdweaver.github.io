@@ -44,12 +44,15 @@
 					</button>
 					<label class="dj-headerSearch">
 						<input class="form-control" type="text">
-						<span class="sr-only">Search</span>
-					</label>
-					<button class="btn dj-btn-light">Search</button>
+						<span class="sr-only">Search</span> </label>
+					<button class="btn dj-btn-light">
+						Search
+					</button>
 				</div>
 				<div class="dj-headerRight">
-					<button class="btn dj-btn-light">New Entry</button>
+					<button class="btn dj-btn-light">
+						New Entry
+					</button>
 					<div class="dj-userDropdown dropdown" data-bind="visible: isSignedIn">
 						<button class="dj-userDropdown-button dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 							<div class="dj-userImage" data-bind="html: userImage"></div>
@@ -75,8 +78,10 @@
 
 				<div class="dj-content">
 					<div data-bind="foreach: entries">
-						<div data-bind="text: title"></div>
-						<div data-bind="text: date"></div>
+						<div class="dj-entryCard">
+							<div data-bind="text: title"></div>
+							<div data-bind="text: date"></div>
+						</div>
 					</div>
 				</div>
 			</div>
