@@ -4,12 +4,11 @@ function createUserObject(userName, userImage, userEmail, entries) {
 	this.userEmail = ko.observable(userEmail);
 	this.isSignedIn = ko.observable(true);
 
-	this.entries = ko.observable(entries);
+	this.entries = entries;
 }
 
 function onSignIn(googleUser) {
 	var profile = googleUser.getBasicProfile();
-	console.log('ID: ' + profile.getId());
 	var name = (profile.getName());
 	var userImage = ('<img src="' + profile.getImageUrl() + '">');
 	var userEmail = ('Email: ' + profile.getEmail());
@@ -23,7 +22,7 @@ function onSignIn(googleUser) {
 	}];
 	
 	ko.applyBindings(new createUserObject(name, userImage, userEmail, entries));
-
+	console.log(entries);
 }
 
 function signOut() {
