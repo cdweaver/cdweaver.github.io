@@ -39,6 +39,7 @@ h3{
 }
 .dj-userDropdown{
 	color: #000;
+	display: inline-block;
 }
 .dj-userDropdown-button{
 	border: none;
@@ -72,6 +73,17 @@ h3{
 }
 .dj-menuItem:hover{
 	background-color: #eee;
+}
+
+.dj-content{
+	padding: 15px;
+}
+.dj-entryCard{
+	background-color: #fff;
+	padding: 15px;
+	-webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
 }
 
 /*BUTTONS*/
