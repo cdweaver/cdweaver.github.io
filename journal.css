@@ -87,7 +87,9 @@ h3{
 #sb-site{
 	background-color: #eee;
 }
-@media (min-width: 1200px)
-.dj-slidebar.sb-width-thin{
+@media (min-width: 1200px){
+	.dj-slidebar.sb-width-thin{
 	width: 20%;
 }
+}
+
