@@ -81,9 +81,10 @@ h3{
 .dj-entryCard{
 	background-color: #fff;
 	padding: 15px;
-	-webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.75);
+margin-bottom: 15px;
 }
 
 /*BUTTONS*/
