@@ -4,7 +4,8 @@ function createUserObject(userName, userImage, userEmail, entries) {
 	this.userEmail = ko.observable(userEmail);
 	this.isSignedIn = ko.observable(true);
 
-	this.entries = entries;
+	this.entries = ko.observableArray(entries);
+	console.log(entries);
 }
 
 function onSignIn(googleUser) {
@@ -22,7 +23,7 @@ function onSignIn(googleUser) {
 	}];
 	
 	ko.applyBindings(new createUserObject(name, userImage, userEmail, entries));
-	console.log(entries);
+	
 }
 
 function signOut() {
