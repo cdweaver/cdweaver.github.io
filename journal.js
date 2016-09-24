@@ -1,3 +1,12 @@
+var entries = [{
+	title : "My Great Day",
+	date: "9/24/2016"
+},{
+	title: "My Horrible Day",
+	date: "9/23/2016"
+}];
+
+
 function createUserObject(userName, userImage, userEmail) {
     this.userName = ko.observable(userName);
     this.userImage = ko.observable(userImage);

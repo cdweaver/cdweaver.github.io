@@ -19,6 +19,7 @@ html, body{
 .dj-headerLeft{
 	float: left;
 	color: #fff;
+	padding-top: 5px;
 }
 .dj-headerRight{
 	float: right;
@@ -27,7 +28,8 @@ html, body{
 	font-size: 30px;
 	background-color: transparent;
 	border: none;
-	vertical-align: bottom;
+	vertical-align: middle;
+	padding: 0 5px 0 0;
 }
 .dj-headerSearch{
 	margin-bottom: 0;
@@ -72,10 +74,20 @@ h3{
 	background-color: #eee;
 }
 
+/*BUTTONS*/
+.dj-btn-light{
+	background-color: #eee;
+	color: purple;
+}
+
 /*SLIDEBAR OVERRIDES*/
 .sb-slidebar{
 	background-color: #fff;
 }
 #sb-site{
 	background-color: #eee;
+}
+@media (min-width: 1200px)
+.dj-slidebar.sb-width-thin{
+	width: 20%;
 }
